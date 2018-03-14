@@ -1,0 +1,17 @@
+    RewriteEngine on
+
+    #редирект с www на без www 
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+     
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+    #Удаляем katalogimg/neww/ из URL
+    RewriteRule ^katalogimg/neww/(.+)$ https://landing-sssr.com/$1 [R=301,L]
+
+
+    #Запрещаем загрузку файлов с внешних сайтов
+    #RewriteCond %{HTTP_REFERER} !^$
+    #RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?landing-sssr.com [NC]
+    #RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]

@@ -1,0 +1,19 @@
+User-Agent: *
+
+Disallow: /cgi-bin
+Disallow: /css
+Disallow: /dom
+Disallow: /noindex
+Disallow: /js
+Disallow: /error_log
+Disallow: /PHPMailer.php
+Disallow: /e718479a7f9b.html
+
+Allow: /css/css/video.css
+Allow: /video.min.js
+Allow: /img
+Allow: /index.html
+
+
+Host:  https://landing-sssr.com
+Sitemap: https://landing-sssr.com/sitemap.xml
